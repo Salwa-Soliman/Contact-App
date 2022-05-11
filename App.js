@@ -1,20 +1,42 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+// In App.js in a new project
 
-export default function App() {
+import * as React from "react";
+import { View, Text, StatusBar } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { NativeBaseProvider, Box } from "native-base";
+
+import HomePage from "./resources/screens/HomePage";
+import Landing from "./resources/screens/Landing";
+
+function HomeScreen() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+      <Text>Home Screen</Text>
     </View>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+const Stack = createNativeStackNavigator();
+
+function App() {
+  return (
+    <NativeBaseProvider>
+      <StatusBar
+        showHideTransition="slide"
+        animated={true}
+        barStyle="light-content"
+      />
+      <Box flex={1}>
+        <NavigationContainer>
+          <Stack.Navigator screenOptions={{ headerShown: false }}>
+            <Stack.Screen name="HomePage" component={HomePage} />
+            <Stack.Screen name="Landing" component={Landing} />
+          </Stack.Navigator>
+        </NavigationContainer>
+      </Box>
+    </NativeBaseProvider>
+  );
+}
+
+export default App;
