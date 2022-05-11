@@ -1,6 +1,6 @@
 import { StyleSheet, View, useWindowDimensions, Text } from "react-native";
 import React from "react";
-import { COLORS, SPACING } from "./../constants/STYLES";
+import { COLORS, SPACING } from "../../constants/STYLES";
 
 const CurvedHeader = () => {
   const { height } = useWindowDimensions();

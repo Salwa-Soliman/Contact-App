@@ -19,3 +19,22 @@ export const SPACING = {
   screenPadding: 30,
   elementMargin: 20,
 };
+
+export const STYLES = {
+  row: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    // alignItems: "center",
+  },
+  header: {
+    marginBottom: 5,
+    fontSize: 18,
+    fontWeight: "600",
+    color: COLORS.textColor,
+  },
+  image: {
+    maxWidth: "100%",
+    maxHeight: "100%",
+    resizeMode: "contain",
+  },
+};

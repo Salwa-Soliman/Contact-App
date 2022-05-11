@@ -8,14 +8,11 @@ import { NativeBaseProvider, Box } from "native-base";
 
 import HomePage from "./resources/screens/HomePage";
 import Landing from "./resources/screens/Landing";
-
-function HomeScreen() {
-  return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text>Home Screen</Text>
-    </View>
-  );
-}
+import { COLORS } from "./resources/constants/STYLES";
+import Products from "./resources/screens/Products";
+import Programs from "./resources/screens/Programs";
+import TermsAndConditions from "./resources/screens/TermsAndConditions";
+import Redeem from "./resources/screens/Redeem";
 
 const Stack = createNativeStackNavigator();
 
@@ -23,15 +20,22 @@ function App() {
   return (
     <NativeBaseProvider>
       <StatusBar
-        showHideTransition="slide"
-        animated={true}
-        barStyle="light-content"
+        barStyle={"light-content"}
+        backgroundColor={COLORS.primary800}
       />
       <Box flex={1}>
         <NavigationContainer>
-          <Stack.Navigator screenOptions={{ headerShown: false }}>
+          {/* screenOptions={{ headerShown: false }} */}
+          <Stack.Navigator>
             <Stack.Screen name="HomePage" component={HomePage} />
             <Stack.Screen name="Landing" component={Landing} />
+            <Stack.Screen name="Products" component={Products} />
+            <Stack.Screen name="Programs" component={Programs} />
+            <Stack.Screen
+              name="TermsAndConditions"
+              component={TermsAndConditions}
+            />
+            <Stack.Screen name="Redeem" component={Redeem} />
           </Stack.Navigator>
         </NavigationContainer>
       </Box>

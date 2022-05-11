@@ -1,7 +1,7 @@
 import React from "react";
 import { VStack } from "native-base";
 import CustomBox from "./CustomBox";
-import { SPACING } from "../constants/STYLES";
+import { SPACING } from "../../constants/STYLES";
 
 const BoxesList = ({ data }) => {
   return (
