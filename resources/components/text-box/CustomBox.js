@@ -12,6 +12,7 @@ const CustomBox = ({ description, header, dark, image }) => {
     <View
       style={[
         styles.container,
+        STYLES.boxShadow,
         { backgroundColor: dark ? COLORS.primary800 : "#fff" },
       ]}
     >
@@ -109,11 +110,6 @@ const styles = StyleSheet.create({
   container: {
     padding: 20,
     borderRadius: 20,
-    elevation: 9,
-    shadowColor: "#000",
-    shadowOpacity: 0.6,
-    shadowOffset: { width: 2, height: 2 },
-    shadowRadius: 5,
   },
   row: {
     flexDirection: "row",

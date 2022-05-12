@@ -1,11 +1,12 @@
-import { View, Text } from "react-native";
 import React from "react";
-
+import List from "../components/ui/List";
+import MainScreen from "./../components/ui/MainScreen";
+import { PROGRAMS } from "../constants/DATA";
 const Programs = () => {
   return (
-    <View>
-      <Text>Programs</Text>
-    </View>
+    <MainScreen>
+      <List data={PROGRAMS} />
+    </MainScreen>
   );
 };
 

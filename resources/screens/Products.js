@@ -1,11 +1,15 @@
-import { View, Text } from "react-native";
+// import { View, Text } from "react-native";
 import React from "react";
+import { PRODUCTS } from "../constants/DATA";
+// import Item from "../components/ui/Item";
+import MainScreen from "./../components/ui/MainScreen";
+import List from "../components/ui/List";
 
 const Products = () => {
   return (
-    <View>
-      <Text>Products</Text>
-    </View>
+    <MainScreen>
+      <List data={PRODUCTS} />
+    </MainScreen>
   );
 };
 

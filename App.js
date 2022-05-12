@@ -13,6 +13,8 @@ import Products from "./resources/screens/Products";
 import Programs from "./resources/screens/Programs";
 import TermsAndConditions from "./resources/screens/TermsAndConditions";
 import Redeem from "./resources/screens/Redeem";
+import SingleProduct from "./resources/screens/SingleProduct";
+import SingleProgram from "./resources/screens/SingleProgram";
 
 const Stack = createNativeStackNavigator();
 
@@ -36,6 +38,8 @@ function App() {
               component={TermsAndConditions}
             />
             <Stack.Screen name="Redeem" component={Redeem} />
+            <Stack.Screen name="SingleProduct" component={SingleProduct} />
+            <Stack.Screen name="SingleProgram" component={SingleProgram} />
           </Stack.Navigator>
         </NavigationContainer>
       </Box>

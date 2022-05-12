@@ -52,7 +52,7 @@ export const PRODUCTS = [
 
 export const PROGRAMS = [
   {
-    image: require("../images/programs/homes.png"),
+    image: require("../images/programs/home.jpg"),
     title: "homes",
   },
   {
