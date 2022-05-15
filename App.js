@@ -15,6 +15,9 @@ import TermsAndConditions from "./resources/screens/TermsAndConditions";
 import Redeem from "./resources/screens/Redeem";
 import SingleProduct from "./resources/screens/SingleProduct";
 import SingleProgram from "./resources/screens/SingleProgram";
+import CurvedHeader from "./resources/components/ui/CurvedHeader";
+import Plans from "./resources/screens/Plans";
+import Info from "./resources/screens/Info";
 
 const Stack = createNativeStackNavigator();
 
@@ -27,8 +30,13 @@ function App() {
       />
       <Box flex={1}>
         <NavigationContainer>
-          {/* screenOptions={{ headerShown: false }} */}
-          <Stack.Navigator>
+          <Stack.Navigator
+            screenOptions={{
+              headerTintColor: COLORS.primary800,
+              headerTransparent: true,
+              title: "",
+            }}
+          >
             <Stack.Screen name="HomePage" component={HomePage} />
             <Stack.Screen name="Landing" component={Landing} />
             <Stack.Screen name="Products" component={Products} />
@@ -40,6 +48,8 @@ function App() {
             <Stack.Screen name="Redeem" component={Redeem} />
             <Stack.Screen name="SingleProduct" component={SingleProduct} />
             <Stack.Screen name="SingleProgram" component={SingleProgram} />
+            <Stack.Screen name="Plans" component={Plans} />
+            <Stack.Screen name="Info" component={Info} />
           </Stack.Navigator>
         </NavigationContainer>
       </Box>

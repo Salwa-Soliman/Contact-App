@@ -4,7 +4,7 @@ import MainScreen from "./../components/ui/MainScreen";
 import { PROGRAMS } from "../constants/DATA";
 const Programs = () => {
   return (
-    <MainScreen>
+    <MainScreen curvedHeader>
       <List data={PROGRAMS} />
     </MainScreen>
   );

@@ -4,31 +4,36 @@ import { COLORS, SPACING, STYLES } from "../../constants/STYLES";
 import { ImageBackground } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
-const Item = ({ imageSrc, title, index }) => {
+const Item = ({ imageSrc, title, showLogoImage, withTitle }) => {
   const navigation = useNavigation();
+  console.log("*-**-*--src", imageSrc);
   return (
     <ImageBackground
       source={imageSrc}
       alt="image"
       style={[
         {
-          width: 150,
-          height: 150,
-          resizeMode: "cover",
+          width: showLogoImage ? 200 : 150,
+          height: showLogoImage ? 100 : 150,
           borderRadius: 20,
           overflow: "hidden",
-          marginHorizontal: title ? 8 : 0,
-          marginBottom: title ? 0 : SPACING.elementMargin,
+          marginHorizontal: withTitle || showLogoImage ? 8 : 0,
+          marginBottom: withTitle || showLogoImage ? 0 : SPACING.elementMargin,
+          backgroundColor: COLORS.primary600 + "20",
         },
-        STYLES.boxShadow,
+        !showLogoImage && STYLES.boxShadow,
       ]}
+      resizeMode={showLogoImage ? "contain" : "cover"}
     >
       <Button
-        variant={"outline"}
+        variant={"ghost"}
         position="absolute"
         w="100%"
         h="100%"
-        bg={title ? "#000a" : "transparent"}
+        borderWidth={showLogoImage ? 2 : 0}
+        borderRadius={showLogoImage && "3xl"}
+        borderColor="#bbb5"
+        bg={withTitle ? COLORS.primary800 + "a0" : "transparent"}
         _text={{
           color: COLORS.secondary600,
           fontWeight: "700",
@@ -40,9 +45,11 @@ const Item = ({ imageSrc, title, index }) => {
           },
         }}
         colorScheme="transparent"
-        onPress={() => navigation.navigate("SingleProduct", { index: index })}
+        onPress={() => {
+          navigation.navigate("SingleProduct", { title: title });
+        }}
       >
-        {title && title.toUpperCase()}
+        {withTitle && title.toUpperCase()}
       </Button>
     </ImageBackground>
   );

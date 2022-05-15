@@ -3,15 +3,17 @@ import React from "react";
 import Item from "./Item";
 import { STYLES } from "../../constants/STYLES";
 
-const List = ({ data, withTitle }) => {
+const List = ({ data, withTitle, logoImage }) => {
   return (
     <View style={[STYLES.row, { flexWrap: "wrap" }]}>
       {data.map((item, i) => (
         <Item
           key={i}
-          imageSrc={item.image}
+          imageSrc={logoImage ? item.logo : item.image}
           index={i}
-          title={withTitle ? item.title : ""}
+          title={item.title}
+          showLogoImage={logoImage}
+          withTitle={withTitle}
         />
       ))}
     </View>

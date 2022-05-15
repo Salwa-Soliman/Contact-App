@@ -38,7 +38,7 @@ export const STYLES = {
     resizeMode: "contain",
   },
   boxShadow: {
-    elevation: 9,
+    elevation: 10,
     shadowColor: "#000",
     shadowOpacity: 0.6,
     shadowOffset: { width: 2, height: 2 },

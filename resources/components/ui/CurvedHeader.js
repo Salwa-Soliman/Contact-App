@@ -5,7 +5,7 @@ import { COLORS, SPACING } from "../../constants/STYLES";
 const CurvedHeader = () => {
   const { height } = useWindowDimensions();
   return (
-    <View style={[styles.container, { height: height * 0.15 }]}>
+    <View style={[styles.container, { height: height * 0.2 }]}>
       <View>
         <Text style={styles.welcome}>Welcome</Text>
         <Text style={styles.username}>Guest</Text>
@@ -22,7 +22,6 @@ export default CurvedHeader;
 const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
-    width: "100%",
     backgroundColor: COLORS.primary800,
     borderBottomRightRadius: 30,
     borderBottomLeftRadius: SPACING.screenPadding,
@@ -30,8 +29,6 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     zIndex: -1,
-    position: "absolute",
-    top: 0,
   },
   welcome: {
     color: "#fff",
