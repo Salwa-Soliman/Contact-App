@@ -209,6 +209,15 @@ export const PLANS = [
     ],
   },
 ];
+
+export const MONTHS = [
+  "12 Month",
+  "24 Month",
+  "36 Month",
+  "48 Month",
+  "60 Month",
+  "72 Month",
+];
 // export const PLANS = [
 //   {
 //     title: `Auto`,

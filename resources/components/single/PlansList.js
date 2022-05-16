@@ -8,12 +8,11 @@ import Plan from "./Plan";
 const PlansList = ({ screenHeight, title, plans }) => {
   return (
     <ScrollView
-      mt={-screenHeight * 0.05}
-      style={styles.container}
+      // mt={-screenHeight * 0.05}
+      // style={styles.container}
       shadow={5}
       contentContainerStyle={{ paddingBottom: 50 }}
     >
-      <Title />
       {plans.map((plan, i) => (
         <Plan key={i} plan={plan} />
       ))}

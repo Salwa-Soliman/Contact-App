@@ -3,9 +3,14 @@ import React from "react";
 import { Button, HStack, Icon, Text } from "native-base";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
-const IconButton = ({ children, icon, size, color, onPress }) => {
+const IconButton = ({ children, icon, size, color, onPress, boldText, bg }) => {
   return (
-    <Button variant={"link"} onPress={onPress}>
+    <Button
+      variant={"link"}
+      onPress={onPress}
+      bg={bg ? bg : "transparent"}
+      rounded="full"
+    >
       <HStack alignItems={"center"}>
         <Icon
           as={MaterialCommunityIcons}
@@ -14,7 +19,13 @@ const IconButton = ({ children, icon, size, color, onPress }) => {
           size={size}
           mr={1}
         />
-        <Text color={color}>{children}</Text>
+        <Text
+          color={color}
+          fontWeight={boldText ? "600" : "normal"}
+          fontSize={boldText ? 16 : 14}
+        >
+          {children}
+        </Text>
       </HStack>
     </Button>
   );
