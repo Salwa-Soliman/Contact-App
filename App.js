@@ -18,6 +18,9 @@ import SingleProgram from "./resources/screens/SingleProgram";
 import CurvedHeader from "./resources/components/ui/CurvedHeader";
 import Plans from "./resources/screens/Plans";
 import Info from "./resources/screens/Info";
+import Footer from "./resources/components/ui/Footer";
+import Wallet from "./resources/screens/Wallet";
+import ContactUs from "./resources/components/ui/ContactUs";
 
 const Stack = createNativeStackNavigator();
 
@@ -50,7 +53,10 @@ function App() {
             <Stack.Screen name="SingleProgram" component={SingleProgram} />
             <Stack.Screen name="Plans" component={Plans} />
             <Stack.Screen name="Info" component={Info} />
+            <Stack.Screen name="Wallet" component={Wallet} />
+            <Stack.Screen name="ContactUs" component={ContactUs} />
           </Stack.Navigator>
+          <Footer />
         </NavigationContainer>
       </Box>
     </NativeBaseProvider>
