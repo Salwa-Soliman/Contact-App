@@ -11,11 +11,9 @@ const ProgramInfo = ({ data }) => {
           <Text style={styles.header}>{item}</Text>
           <View style={styles.nestedContainer}>
             {data[item].map((nestedData, i) => (
-              <HStack>
+              <HStack key={i}>
                 <Text style={styles.star}>* </Text>
-                <Text key={i} style={styles.nestedData}>
-                  {nestedData}
-                </Text>
+                <Text style={styles.nestedData}>{nestedData}</Text>
               </HStack>
             ))}
           </View>

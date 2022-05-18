@@ -8,7 +8,7 @@ import Footer from "../components/ui/Footer";
 const HomePage = () => {
   return (
     <>
-      <MainScreen curvedHeader>
+      <MainScreen curvedHeader screen={"home"}>
         <BoxesList data={BOXES} />
         <Carousel
           data={PRODUCTS.slice(0, 4)}

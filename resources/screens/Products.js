@@ -7,7 +7,7 @@ import Footer from "../components/ui/Footer";
 const Products = () => {
   return (
     <>
-      <MainScreen curvedHeader>
+      <MainScreen curvedHeader screen={"products"}>
         <List data={PRODUCTS} singleScreen={"SingleProduct"} />
       </MainScreen>
       <Footer activeScreen="Products" />

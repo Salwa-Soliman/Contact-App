@@ -1,13 +1,12 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 import Footer from "../components/ui/Footer";
+import MainScreen from "../components/ui/MainScreen";
 
 const ContactUs = () => {
   return (
     <>
-      <View>
-        <Text>ContactUs</Text>
-      </View>
+      <MainScreen curvedHeader screen={"contactUs"}></MainScreen>
 
       <Footer activeScreen={"ContactUs"} />
     </>

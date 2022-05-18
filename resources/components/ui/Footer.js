@@ -22,36 +22,8 @@ function Footer({ activeScreen }) {
         alignItems="center"
         safeAreaBottom
         shadow={6}
-        borderTopRadius="32"
+        // borderTopRadius="32"
       >
-        <Pressable
-          opacity={activeScreen === "home" ? 1 : 0.5}
-          py="3"
-          flex={activeScreen === "home" ? 0 : 1}
-          onPress={() => {
-            navigation.replace("HomePage");
-          }}
-          rounded="full"
-          style={activeScreen === "home" ? styles.floatingIcon : {}}
-        >
-          <Center>
-            <Icon
-              mb="1"
-              as={
-                <Ionicons
-                  name={activeScreen === "home" ? "home" : "home-outline"}
-                />
-              }
-              color={COLORS.secondary600}
-              size={activeScreen === "home" ? "xl" : "md"}
-            />
-            {activeScreen !== "home" && (
-              <Text color={COLORS.secondary600} fontSize="12">
-                Home
-              </Text>
-            )}
-          </Center>
-        </Pressable>
         <Pressable
           opacity={activeScreen === "Products" ? 1 : 0.5}
           py="2"
@@ -116,6 +88,35 @@ function Footer({ activeScreen }) {
             )}
           </Center>
         </Pressable>
+
+        <Pressable
+          opacity={activeScreen === "home" ? 1 : 0.5}
+          py="3"
+          flex={activeScreen === "home" ? 0 : 1}
+          onPress={() => {
+            navigation.replace("HomePage");
+          }}
+          rounded="full"
+          style={activeScreen === "home" ? styles.floatingIcon : {}}
+        >
+          <Center>
+            <Icon
+              mb="1"
+              as={
+                <Ionicons
+                  name={activeScreen === "home" ? "home" : "home-outline"}
+                />
+              }
+              color={COLORS.secondary600}
+              size={activeScreen === "home" ? "xl" : "md"}
+            />
+            {activeScreen !== "home" && (
+              <Text color={COLORS.secondary600} fontSize="12">
+                Home
+              </Text>
+            )}
+          </Center>
+        </Pressable>
         <Pressable
           opacity={activeScreen === "Wallet" ? 1 : 0.5}
           py="2"
@@ -169,9 +170,11 @@ function Footer({ activeScreen }) {
               color={COLORS.secondary600}
               size={activeScreen === "ContactUs" ? "xl" : "md"}
             />
-            <Text color={COLORS.secondary600} fontSize="12">
-              Contact us
-            </Text>
+            {activeScreen !== "ContactUs" && (
+              <Text color={COLORS.secondary600} fontSize="12">
+                Contact us
+              </Text>
+            )}
           </Center>
         </Pressable>
       </HStack>
@@ -188,7 +191,7 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.primary800,
     width: 70,
     height: 70,
-    borderColor: "#fff",
+    borderColor: "#fff9",
     borderWidth: 3,
     justifyContent: "center",
     alignItems: "center",

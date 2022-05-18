@@ -6,7 +6,7 @@ import Footer from "../components/ui/Footer";
 const Programs = () => {
   return (
     <>
-      <MainScreen curvedHeader>
+      <MainScreen curvedHeader screen={"programs"}>
         <List data={PROGRAMS} singleScreen={"SingleProgram"} />
       </MainScreen>
       <Footer activeScreen={"Programs"} />
