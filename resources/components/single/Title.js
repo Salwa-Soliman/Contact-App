@@ -4,24 +4,46 @@ import { COLORS, SPACING, STYLES } from "../../constants/STYLES";
 import { Button } from "native-base";
 import { useNavigation } from "@react-navigation/native";
 
-const Title = () => {
+const Title = ({
+  header,
+  subTitle,
+  seeAllLink,
+  singleProgram,
+  // headerColor,
+  // subColor,
+  // centered,
+}) => {
   const navigation = useNavigation();
 
+  const headerExtraStyle = singleProgram
+    ? { color: COLORS.textColor, fontSize: 22 }
+    : { color: COLORS.primary800 };
+  const subTitleExtraStyle = singleProgram
+    ? { color: COLORS.secondary600, textAlign: "center", fontSize: 14 }
+    : { color: COLORS.textColor };
   return (
     <View style={styles.container}>
-      <View style={[STYLES.row, { alignItems: "center" }]}>
-        <Text style={styles.header}>Our Plans:</Text>
-        <Button
-          variant={"link"}
-          _text={{ color: COLORS.secondary600, fontWeight: "600" }}
-          onPress={() => navigation.navigate("Plans")}
-        >
-          See All
-        </Button>
+      <View
+        style={[
+          STYLES.row,
+          {
+            alignItems: "center",
+            justifyContent: singleProgram ? "center" : "space-between",
+          },
+        ]}
+      >
+        <Text style={[styles.header, headerExtraStyle]}>{header}</Text>
+        {seeAllLink && (
+          <Button
+            variant={"link"}
+            _text={{ color: COLORS.secondary600, fontWeight: "600" }}
+            onPress={() => navigation.navigate(seeAllLink)}
+          >
+            See All
+          </Button>
+        )}
       </View>
-      <Text style={styles.subText}>
-        Tailor made plans that cover all your needs
-      </Text>
+      <Text style={[styles.subText, subTitleExtraStyle]}>{subTitle}</Text>
     </View>
   );
 };
@@ -34,11 +56,11 @@ const styles = StyleSheet.create({
   },
   header: {
     fontSize: 20,
-    color: COLORS.primary800,
+    // color: COLORS.primary800,
     fontWeight: "600",
   },
   subText: {
-    color: COLORS.textColor,
+    // color: COLORS.textColor,
     fontSize: 12,
   },
 });

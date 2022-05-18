@@ -4,18 +4,15 @@ import { COLORS, SPACING } from "../../constants/STYLES";
 import { ScrollView } from "native-base";
 import Title from "./Title";
 import Plan from "./Plan";
+import LoanCalculator from "./LoanCalculator";
 
 const PlansList = ({ screenHeight, title, plans }) => {
   return (
-    <ScrollView
-      // mt={-screenHeight * 0.05}
-      // style={styles.container}
-      shadow={5}
-      contentContainerStyle={{ paddingBottom: 50 }}
-    >
+    <ScrollView shadow={5} contentContainerStyle={{ paddingBottom: 10 }}>
       {plans.map((plan, i) => (
         <Plan key={i} plan={plan} />
       ))}
+      <LoanCalculator />
     </ScrollView>
   );
 };

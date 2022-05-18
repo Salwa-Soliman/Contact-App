@@ -20,7 +20,8 @@ import Plans from "./resources/screens/Plans";
 import Info from "./resources/screens/Info";
 import Footer from "./resources/components/ui/Footer";
 import Wallet from "./resources/screens/Wallet";
-import ContactUs from "./resources/components/ui/ContactUs";
+import ContactUs from "./resources/screens/ContactUs";
+import Whatsapp from "./resources/components/ui/Whatsapp";
 
 const Stack = createNativeStackNavigator();
 
@@ -56,7 +57,8 @@ function App() {
             <Stack.Screen name="Wallet" component={Wallet} />
             <Stack.Screen name="ContactUs" component={ContactUs} />
           </Stack.Navigator>
-          <Footer />
+          {/* <Footer /> */}
+          {/* <Whatsapp /> */}
         </NavigationContainer>
       </Box>
     </NativeBaseProvider>

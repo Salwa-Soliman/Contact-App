@@ -3,7 +3,8 @@ import React from "react";
 import Item from "./Item";
 import { STYLES } from "../../constants/STYLES";
 
-const List = ({ data, withTitle, logoImage }) => {
+const List = ({ data, withTitle, logoImage, singleScreen }) => {
+  console.log("list", singleScreen);
   return (
     <View style={[STYLES.row, { flexWrap: "wrap" }]}>
       {data.map((item, i) => (
@@ -14,6 +15,7 @@ const List = ({ data, withTitle, logoImage }) => {
           title={item.title}
           showLogoImage={logoImage}
           withTitle={withTitle}
+          singleScreen={singleScreen}
         />
       ))}
     </View>

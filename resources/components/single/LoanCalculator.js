@@ -1,3 +1,4 @@
+import { View } from "native-base";
 import React, { useState } from "react";
 import { COLORS } from "../../constants/STYLES";
 import IconButton from "../ui/IconButton";
@@ -7,7 +8,7 @@ const LoanCalculator = () => {
   const [showModal, setShowModal] = useState(false);
 
   return (
-    <>
+    <View mt="2">
       <IconButton
         size="7"
         icon={"calculator-variant"}
@@ -22,7 +23,7 @@ const LoanCalculator = () => {
       {showModal && (
         <LoanModal showModal={showModal} setShowModal={setShowModal} />
       )}
-    </>
+    </View>
   );
 };
 

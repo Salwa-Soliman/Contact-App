@@ -6,9 +6,11 @@ import { HStack } from "native-base";
 const PlanDetails = ({ details }) => {
   return (
     <View style={styles.container}>
-      {details.map((item) => {
+      {details.map((item, i) => {
         return (
-          <Text style={styles.text}>- {item.colored + item.text}</Text>
+          <Text key={i} style={styles.text}>
+            - {item.colored + item.text}
+          </Text>
           //   <HStack>
           //     <Text style={styles.yellowText}>{item.colored}</Text>
           //     <Text style={styles.text}>{item.text}</Text>

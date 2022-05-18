@@ -119,17 +119,13 @@ const LoanModal = ({ showModal, setShowModal }) => {
 
         <Modal.Footer justifyContent="space-around">
           <Button
+            variant={"link"}
             onPress={() => {
               setShowModal(false);
             }}
-            borderRadius="2xl"
-            px={6}
-            // colorScheme={"danger"}
-            bg={COLORS.primary800}
             _text={{
-              color: COLORS.secondary600,
+              // color: COLORS.primary800,
               fontSize: 16,
-              fontWeight: "bold",
             }}
           >
             Close

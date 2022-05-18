@@ -116,18 +116,91 @@ export const PROGRAMS = [
   {
     image: require(`../images/programs/home.jpg`),
     title: `homes`,
+    subTitle: "A new beginning for a perfect life.",
+    singleScreenContent: {
+      Overview: [
+        "Through the partnership between Contact and Coldwell Banker, you can take advantage of an endless world of benefits and offers. Providing you plenty of discounts and special prices",
+      ],
+      "Program eligibility": ["Coldwell Banker existing customer"],
+      Benifits: [
+        "Free 3D home design sample on either the living room, bedroom, or one partition of the reception",
+        "50% discount on 2D & 3D  modelling upon contractual agreement provided by RD design",
+        "Up to 5 million EGP Contact Mortgage Loan",
+        "Up to 500,000 EGP Contact Shopping loan",
+        "Exclusive offers and discounts from Jotun, Ikea, and Carrier",
+      ],
+    },
   },
   {
     image: require(`../images/programs/Clubs.jpg`),
     title: `Clubs`,
+    subTitle: "Championship made easy",
+    singleScreenContent: {
+      Overview: [
+        "Through the Clubs Program, you can fund the membership of your aspired club with the easiest and fastest procedures, only with your National ID and installment periods from 6 to 60 months.",
+      ],
+      "Contact Club Program benefits": [
+        "No down-payment",
+        "Lowest interest rate",
+        "Installment periods from 6 to 60 months",
+        "Easiest and fastest procedures",
+        "Membership activated immediately",
+        "You can apply through the club branches, Contact branches, or call Contact customer service 16177",
+      ],
+      "Contact Club Program terms and conditions": [
+        "Membership application approval from the club",
+      ],
+      "Participating Clubs": [
+        "Wadi Degla Clubs",
+        "Zohour Club",
+        "Matrix Club",
+        "Geziret Elward Sporting Club",
+        "Platinum Club Katameya",
+        "Hawar Sporting Club",
+        "Porto Sporting Clubs",
+      ],
+    },
   },
   {
     image: require(`../images/programs/referral2.jpg`),
     title: `referral`,
+    singleScreenContent: {
+      Overview: [
+        ,
+        "For Contact customers, you can now refer your friends and get free points and exclusive discounts to buy from Contact Rewards partners or pay your installments and administrative expenses.",
+      ],
+      "Contact benefits": [
+        "Existing Contact customers are rewarded by obtaining rewards points, where the number of points is determined according to the different Contact products.",
+        "Rewards points can be used for purchases from Contact Rewards Program partners.",
+        "The points can be used to pay Contact installments or administrative expenses.",
+      ],
+      "Contact referral Program terms and conditions": [
+        "The candidate must be a contact registered customer",
+        "For existing Contact customers to obtain rewards points, new customers must make a contract for one of Contact products.",
+        "For Contact Shopping and Contact Finishing only, nominated customers must complete at least one purchase transaction after credit approval and contracting so that existing customers can get reward points automatically",
+        "Existing Contact customers can filter their knowledge through the website, the Contact mobile application, the forms inside the branches, customer service centers or through the official social media platforms of Contact",
+        "A maximum limit for existing Contact clients is to nominate 10 new clients per month",
+      ],
+    },
   },
   {
     image: require(`../images/programs/education.jpg`),
     title: `education`,
+    subTitle: "Funding Education, Building the Future…",
+    singleScreenContent: {
+      Overview: [
+        "At Contact, we believe in building futures. You can now finance all stages of local and international educational programs within Egypt up to 1 million EGP. Whether it’s a school, university, or even a postgraduate study, we support you for a brighter future.",
+      ],
+      "Contact Education Benefits": [
+        "Financing up to 1 million EGP",
+        "No Down-payment",
+        "Payment plans up to 12 months",
+        "Funding all types of Egyptian and international education systems for schools and universities",
+        "Funding courses and postgraduate studies",
+        "The possibility of early payment after 6 installments",
+        "Discounts on educational, school supplies, and educational electronic devices",
+      ],
+    },
   },
 ];
 

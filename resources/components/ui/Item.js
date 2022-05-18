@@ -4,9 +4,9 @@ import { COLORS, SPACING, STYLES } from "../../constants/STYLES";
 import { ImageBackground } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
-const Item = ({ imageSrc, title, showLogoImage, withTitle }) => {
+const Item = ({ imageSrc, title, showLogoImage, withTitle, singleScreen }) => {
   const navigation = useNavigation();
-  console.log("*-**-*--src", imageSrc);
+  console.log(singleScreen);
   return (
     <ImageBackground
       source={imageSrc}
@@ -46,7 +46,7 @@ const Item = ({ imageSrc, title, showLogoImage, withTitle }) => {
         }}
         colorScheme="transparent"
         onPress={() => {
-          navigation.navigate("SingleProduct", { title: title });
+          navigation.navigate(singleScreen, { title: title });
         }}
       >
         {withTitle && title.toUpperCase()}
