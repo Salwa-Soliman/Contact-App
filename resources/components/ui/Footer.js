@@ -27,10 +27,12 @@ function Footer({ activeScreen }) {
         <Pressable
           opacity={activeScreen === "home" ? 1 : 0.5}
           py="3"
-          flex={1}
+          flex={activeScreen === "home" ? 0 : 1}
           onPress={() => {
             navigation.replace("HomePage");
           }}
+          rounded="full"
+          style={activeScreen === "home" ? styles.floatingIcon : {}}
         >
           <Center>
             <Icon
@@ -41,20 +43,24 @@ function Footer({ activeScreen }) {
                 />
               }
               color={COLORS.secondary600}
-              size="lg"
+              size={activeScreen === "home" ? "xl" : "md"}
             />
-            <Text color={COLORS.secondary600} fontSize="12">
-              Home
-            </Text>
+            {activeScreen !== "home" && (
+              <Text color={COLORS.secondary600} fontSize="12">
+                Home
+              </Text>
+            )}
           </Center>
         </Pressable>
         <Pressable
           opacity={activeScreen === "Products" ? 1 : 0.5}
           py="2"
-          flex={1}
+          flex={activeScreen === "Products" ? 0 : 1}
           onPress={() => {
             navigation.replace("Products");
           }}
+          rounded="full"
+          style={activeScreen === "Products" ? styles.floatingIcon : {}}
         >
           <Center>
             <Icon
@@ -69,11 +75,13 @@ function Footer({ activeScreen }) {
                 />
               }
               color={COLORS.secondary600}
-              size="lg"
+              size={activeScreen === "Products" ? "xl" : "md"}
             />
-            <Text color={COLORS.secondary600} fontSize="12">
-              Products
-            </Text>
+            {activeScreen !== "Products" && (
+              <Text color={COLORS.secondary600} fontSize="12">
+                Products
+              </Text>
+            )}
           </Center>
         </Pressable>
         <Pressable
@@ -99,7 +107,7 @@ function Footer({ activeScreen }) {
                 />
               }
               color={COLORS.secondary600}
-              size="3xl"
+              size={activeScreen === "Programs" ? "xl" : "md"}
             />
             {activeScreen !== "Programs" && (
               <Text color={COLORS.secondary600} fontSize="12">
@@ -111,10 +119,12 @@ function Footer({ activeScreen }) {
         <Pressable
           opacity={activeScreen === "Wallet" ? 1 : 0.5}
           py="2"
-          flex={1}
+          flex={activeScreen === "Wallet" ? 0 : 1}
           onPress={() => {
             navigation.replace("Wallet");
           }}
+          rounded="full"
+          style={activeScreen === "Wallet" ? styles.floatingIcon : {}}
         >
           <Center>
             <Icon
@@ -125,20 +135,24 @@ function Footer({ activeScreen }) {
                 />
               }
               color={COLORS.secondary600}
-              size="lg"
+              size={activeScreen === "Wallet" ? "xl" : "md"}
             />
-            <Text color={COLORS.secondary600} fontSize="12">
-              Wallet
-            </Text>
+            {activeScreen !== "Wallet" && (
+              <Text color={COLORS.secondary600} fontSize="12">
+                Wallet
+              </Text>
+            )}
           </Center>
         </Pressable>
         <Pressable
           opacity={activeScreen === "ContactUs" ? 1 : 0.5}
           py="2"
-          flex={1}
+          flex={activeScreen === "ContactUs" ? 0 : 1}
           onPress={() => {
             navigation.replace("ContactUs");
           }}
+          rounded="full"
+          style={activeScreen === "ContactUs" ? styles.floatingIcon : {}}
         >
           <Center>
             <Icon
@@ -153,7 +167,7 @@ function Footer({ activeScreen }) {
                 />
               }
               color={COLORS.secondary600}
-              size="lg"
+              size={activeScreen === "ContactUs" ? "xl" : "md"}
             />
             <Text color={COLORS.secondary600} fontSize="12">
               Contact us
